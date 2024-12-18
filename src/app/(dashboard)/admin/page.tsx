@@ -48,15 +48,24 @@
 
 // export default AdminPage;
 
-import AdminPage from '@/app/root/admin/page';
-import React from 'react';
+// import AdminPage from '@/app/root/admin/page';
+// import React from 'react';
 
-interface PageProps {
-  searchParams: { [keys: string]: string | undefined };
+// interface PageProps {
+//   searchParams: { [keys: string]: string | undefined };
+// }
+
+// const page = ({ searchParams }: PageProps) => {
+//   return <AdminPage searchParams={searchParams} />;
+// };
+
+// export default page;
+import React from 'react'
+
+const page = () => {
+  return (
+    <div>page</div>
+  )
 }
 
-const page = ({ searchParams }: PageProps) => {
-  return <AdminPage searchParams={searchParams} />;
-};
-
-export default page;
+export default page
