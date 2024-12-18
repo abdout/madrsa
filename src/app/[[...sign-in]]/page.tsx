@@ -1,7 +1,7 @@
 "use client";
 
-import * as Clerk from "@clerk/elements/common";
-import * as SignIn from "@clerk/elements/sign-in";
+import * as Clerk from "@clerk/elements/dist/react/common";
+import * as SignIn from "@clerk/elements/dist/react/sign-in";
 import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
