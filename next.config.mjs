@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
+
+const path = require('path'); // Import the path module
+
 const nextConfig = {
-  images: {
-    remotePatterns: [{ hostname: "images.pexels.com" }],
-  },
   reactStrictMode: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.resolve.alias = {
-      ...config.resolve.alias, // Important: keep existing aliases
+      ...config.resolve.alias,
       "@clerk/elements": path.resolve(__dirname, "node_modules/@clerk/elements"),
     };
     return config;
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
