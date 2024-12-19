@@ -1,8 +1,8 @@
 // src/components/teacher/ui.tsx
 import { Metadata } from "next";
 import prisma from "@/lib/prisma"; // Adjusted import statement
-import { teacherSchema } from "./schema";
-import TeacherTable from "./table";
+// import TeacherTable from "./table";
+import { teacherSchema } from "@/lib/formValidationSchemas";
 
 export const metadata: Metadata = {
   title: "Teachers",
@@ -36,7 +36,7 @@ export default async function TeacherPage() {
   return (
     <div className="space-y-8 p-8">
       <h2 className="text-2xl font-bold tracking-tight">Teachers</h2>
-      <TeacherTable data={teachers} />
+      {/* <TeacherTable data={teachers} /> */}
     </div>
   );
 }
