@@ -16,3 +16,9 @@ export interface MenuSection {
 export interface DocsConfig {
   sidebarNav: MenuSection[]
 }
+
+export interface SidebarNavItem {
+  title: string;
+  href?: string;
+  items?: SidebarNavItem[];
+}

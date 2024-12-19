@@ -1,13 +1,13 @@
-import { MainNavItem, SidebarNavItem } from "@/components/atom/sidebar/type"
+import { SidebarNavItem } from "@/components/atom/sidebar/type";
 
 export interface DocsConfig {
-  mainNav: MainNavItem[]
-  sidebarNav: SidebarNavItem[]
-  chartsNav: SidebarNavItem[]
+  
+  sidebarNav: SidebarNavItem[];
+  chartsNav: SidebarNavItem[];
 }
 
 export const docsConfig: DocsConfig = {
-  mainNav: [
+  // mainNav: [
     // {
     //   title: "Documentation",
     //   href: "/docs",
@@ -36,7 +36,7 @@ export const docsConfig: DocsConfig = {
     //   title: "Colors",
     //   href: "/colors",
     // },
-  ],
+  // ],
   sidebarNav: [
     {
       title: "Getting Started",
@@ -145,7 +145,7 @@ export const docsConfig: DocsConfig = {
           title: "Sidebar",
           href: "/docs/components/sidebar",
           items: [],
-          label: "New",
+          // label: "New",
         },
         {
           title: "Accordion",
