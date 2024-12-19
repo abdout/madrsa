@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 
 import prisma from "@/lib/prisma";
 import { clerkClient } from "@clerk/nextjs/server";
-import { ExamSchema } from "./vaild";
+import { ExamSchema } from "@/lib/formValidationSchemas";
 
 type CurrentState = { success: boolean; error: boolean };
 export const createExam = async (
