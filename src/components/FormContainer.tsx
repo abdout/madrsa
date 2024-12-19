@@ -1,28 +1,28 @@
-// import prisma from "@/lib/prisma";
-// import FormModal from "./FormModal";
-// import { auth } from "@clerk/nextjs/server";
+import prisma from "@/lib/prisma";
+import FormModal from "./FormModal";
+import { auth } from "@clerk/nextjs/server";
 
-// export type FormContainerProps = {
-//   table:
-//     | "teacher"
-//     | "student"
-//     | "parent"
-//     | "subject"
-//     | "class"
-//     | "lesson"
-//     | "exam"
-//     | "assignment"
-//     | "result"
-//     | "attendance"
-//     | "event"
-//     | "announcement";
-//   type: "create" | "update" | "delete";
-//   data?: any;
-//   id?: number | string;
-// };
+export type FormContainerProps = {
+  table:
+    | "teacher"
+    | "student"
+    | "parent"
+    | "subject"
+    | "class"
+    | "lesson"
+    | "exam"
+    | "assignment"
+    | "result"
+    | "attendance"
+    | "event"
+    | "announcement";
+  type: "create" | "update" | "delete";
+  data?: any;
+  id?: number | string;
+};
 
-// const FormContainer = async ({ table, type, data, id }: FormContainerProps) => {
-//   let relatedData = {};
+const FormContainer = async ({ table, type, data, id }: FormContainerProps) => {
+  let relatedData = {};
 
 //   const { userId, sessionClaims } = auth();
 //   const role = (sessionClaims?.metadata as { role?: string })?.role;
@@ -75,17 +75,17 @@
 //     }
 //   }
 
-//   return (
-//     <div className="">
-//       <FormModal
-//         table={table}
-//         type={type}
-//         data={data}
-//         id={id}
-//         relatedData={relatedData}
-//       />
-//     </div>
-//   );
-// };
+  return (
+    <div className="">
+      <FormModal
+        table={table}
+        type={type}
+        data={data}
+        id={id}
+        relatedData={relatedData}
+      />
+    </div>
+  );
+};
 
-// export default FormContainer;
+export default FormContainer;
